@@ -4,14 +4,15 @@
 ## Situation :
 
 Après différentes tentatives ayant échouée pour les raisons suivantes :
-    - manque d’accord sur sa définition : par qui, comment, pourquoi,
-    - le manque de temps des acteurs pour participer à une procédure qui nécessite un fort travail de recherche pour chaque personne morale qui postule, ce qui a conduit à la formation d’une équipe réduite passant en revu un grand nombre de candidatures, dénaturant le process de son intérêt original,
-    - aucun intérêt économique à bien réaliser la procédure.
+
+- manque d’accord sur sa définition : par qui, comment, pourquoi,
+- le manque de temps des acteurs pour participer à une procédure qui nécessite un fort travail de recherche pour chaque personne morale qui postule, ce qui a conduit à la formation d’une équipe réduite passant en revu un grand nombre de candidatures, dénaturant le process de son intérêt original,
+- aucun intérêt économique à bien réaliser la procédure.
 
 ## Proposition :
 ### Le besoin :
 
-L’association la Chaintech se veut être un interlocuteur de référence avec les pouvoirs public mais sans représenter des personnes morales. De plus il a toujours été voulu (extrait de l’appel du 18 juin 2016 https://www.chaintech.fr/association : “dont la légitimité proviendrait du travail de terrain de ceux qui la portent au quotidien.”) de mettre en avant les acteurs francophone effectuant un travail de qualité parmi la quantité de projet qui sont plus ou moins des arnaques.
+L’association la Chaintech se veut être un interlocuteur de référence avec les pouvoirs public mais sans représenter des personnes morales. De plus il a toujours été voulu (extrait de l’appel du 18 juin 2016 https://www.chaintech.fr/association : “ **dont la légitimité proviendrait du travail de terrain de ceux qui la portent au quotidien.** ”) de mettre en avant les acteurs francophone effectuant un travail de qualité parmi la quantité de projet qui sont plus ou moins des arnaques.
 
 Est donc volontairement exclu de la liste des propositions l’adhésion des personnes morales ouverte à tous.
 
