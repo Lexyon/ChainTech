@@ -27,6 +27,7 @@ class App extends Component {
     this.handleChange   = this.handleChange.bind(this);
     this.saveToIpfs     = this.saveToIpfs.bind(this);
     this.handlePublish  = this.handlePublish.bind(this);
+    this.handleGoBack   = this.handleGoBack.bind(this);
   }
 
   handleSubmit(event) {
@@ -47,6 +48,14 @@ class App extends Component {
     let reader = new window.FileReader();
     reader.onloadend = () => this.saveToIpfs(reader);
     reader.readAsArrayBuffer(file);
+  }
+
+  handleGoBack(event) {
+    event.stopPropagation();
+    event.preventDefault();
+    this.setState({
+      phase: 'formulary'
+    });
   }
 
   handlePublish(event) {
@@ -114,8 +123,7 @@ class App extends Component {
             <div className="input-group">
               <label><strong>File</strong></label>
               <div className="custom-file">
-                <input className="custom-file-input float-right" type="file" onChange={this.handleChange} />
-                <label className="custom-file-label"></label>
+                <input className="float-right" type="file" id="inputGroupFile01" onChange={this.handleChange} />
               </div>
             </div>
             <button className="btn btn-primary" type="submit">Submit</button>
@@ -143,8 +151,9 @@ class App extends Component {
               {'https://ipfs.io/ipfs/' + this.state.addedFileHash}
             </a>
           </div>
-          <div>
+          <div id="editor">
             <button className="btn btn-primary" onClick={this.handlePublish}>Publish to IPFS</button>
+            <button className="btn btn-primary" onClick={this.handleGoBack}>Change the informations</button>
           </div>
         </div>
       </div>
