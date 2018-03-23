@@ -6,7 +6,7 @@ import "../standardProcedure.sol";
 import "../standardOrgan.sol";
 
 
-contract promulgationProcedure is Procedure{
+contract cooptationProcedure is Procedure{
     // 1: Presidential Election
     // 2: Membership addition
     // 3: Constitutionnal reform
