@@ -68,14 +68,14 @@
     "absolutePath": "/Users/henrilieutaud/Documents/Mes documents/97/Workshop/ChainTech/solidity/contracts/standardProcedure.sol",
     "exportedSymbols": {
       "Procedure": [
-        2644
+        2684
       ]
     },
-    "id": 2645,
+    "id": 2685,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2638,
+        "id": 2678,
         "literals": [
           "solidity",
           "^",
@@ -88,9 +88,9 @@
       {
         "absolutePath": "/Users/henrilieutaud/Documents/Mes documents/97/Workshop/ChainTech/solidity/contracts/Kelsen.sol",
         "file": "./Kelsen.sol",
-        "id": 2639,
+        "id": 2679,
         "nodeType": "ImportDirective",
-        "scope": 2645,
+        "scope": 2685,
         "sourceUnit": 9,
         "src": "62:22:4",
         "symbolAliases": [],
@@ -102,7 +102,7 @@
             "arguments": [],
             "baseName": {
               "contractScope": null,
-              "id": 2640,
+              "id": 2680,
               "name": "Kelsen",
               "nodeType": "UserDefinedTypeName",
               "referencedDeclaration": 8,
@@ -112,7 +112,7 @@
                 "typeString": "contract Kelsen"
               }
             },
-            "id": 2641,
+            "id": 2681,
             "nodeType": "InheritanceSpecifier",
             "src": "109:6:4"
           }
@@ -123,9 +123,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 2644,
+        "id": 2684,
         "linearizedBaseContracts": [
-          2644,
+          2684,
           8
         ],
         "name": "Procedure",
@@ -133,10 +133,10 @@
         "nodes": [
           {
             "constant": false,
-            "id": 2643,
+            "id": 2683,
             "name": "procedureTypeNumber",
             "nodeType": "VariableDeclaration",
-            "scope": 2644,
+            "scope": 2684,
             "src": "170:30:4",
             "stateVariable": true,
             "storageLocation": "default",
@@ -145,7 +145,7 @@
               "typeString": "int256"
             },
             "typeName": {
-              "id": 2642,
+              "id": 2682,
               "name": "int",
               "nodeType": "ElementaryTypeName",
               "src": "170:3:4",
@@ -158,7 +158,7 @@
             "visibility": "public"
           }
         ],
-        "scope": 2645,
+        "scope": 2685,
         "src": "87:117:4"
       }
     ],
@@ -168,14 +168,14 @@
     "absolutePath": "/Users/henrilieutaud/Documents/Mes documents/97/Workshop/ChainTech/solidity/contracts/standardProcedure.sol",
     "exportedSymbols": {
       "Procedure": [
-        2644
+        2684
       ]
     },
-    "id": 2645,
+    "id": 2685,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2638,
+        "id": 2678,
         "literals": [
           "solidity",
           "^",
@@ -188,9 +188,9 @@
       {
         "absolutePath": "/Users/henrilieutaud/Documents/Mes documents/97/Workshop/ChainTech/solidity/contracts/Kelsen.sol",
         "file": "./Kelsen.sol",
-        "id": 2639,
+        "id": 2679,
         "nodeType": "ImportDirective",
-        "scope": 2645,
+        "scope": 2685,
         "sourceUnit": 9,
         "src": "62:22:4",
         "symbolAliases": [],
@@ -202,7 +202,7 @@
             "arguments": [],
             "baseName": {
               "contractScope": null,
-              "id": 2640,
+              "id": 2680,
               "name": "Kelsen",
               "nodeType": "UserDefinedTypeName",
               "referencedDeclaration": 8,
@@ -212,7 +212,7 @@
                 "typeString": "contract Kelsen"
               }
             },
-            "id": 2641,
+            "id": 2681,
             "nodeType": "InheritanceSpecifier",
             "src": "109:6:4"
           }
@@ -223,9 +223,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 2644,
+        "id": 2684,
         "linearizedBaseContracts": [
-          2644,
+          2684,
           8
         ],
         "name": "Procedure",
@@ -233,10 +233,10 @@
         "nodes": [
           {
             "constant": false,
-            "id": 2643,
+            "id": 2683,
             "name": "procedureTypeNumber",
             "nodeType": "VariableDeclaration",
-            "scope": 2644,
+            "scope": 2684,
             "src": "170:30:4",
             "stateVariable": true,
             "storageLocation": "default",
@@ -245,7 +245,7 @@
               "typeString": "int256"
             },
             "typeName": {
-              "id": 2642,
+              "id": 2682,
               "name": "int",
               "nodeType": "ElementaryTypeName",
               "src": "170:3:4",
@@ -258,7 +258,7 @@
             "visibility": "public"
           }
         ],
-        "scope": 2645,
+        "scope": 2685,
         "src": "87:117:4"
       }
     ],
@@ -270,5 +270,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-03-23T17:58:47.009Z"
+  "updatedAt": "2018-03-23T18:02:14.909Z"
 }

@@ -100,6 +100,11 @@ contract exclusionProcedure is Procedure{
     }
     
     function voteForExclusion(uint _exclusionNumber) public {
+        // Checking if proposition can still be voted on
+        if (exclusions[_exclusionNumber].startDate + exclusionVoteTime > now) {
+            exclusions[_exclusionNumber].isFinished = true;
+            return;
+        }
 
         // Checking if caller is an admin
         Organ authorizedNominatorsInstance = Organ(authorizedNominatersOrgan);
@@ -122,6 +127,10 @@ contract exclusionProcedure is Procedure{
     }
 
     function executeExclusion(uint _exclusionNumber) public {
+        // Checking if proposition is finished
+        require(exclusions[_exclusionNumber].isFinished);
+        // Check proposition was not acted upon yet
+        require(!exclusions[_exclusionNumber].wasEnacted);
         // Checking if caller is an admin
         Organ authorizedNominatorsInstance = Organ(authorizedNominatersOrgan);
         require(authorizedNominatorsInstance.isNorm(msg.sender));
@@ -134,6 +143,7 @@ contract exclusionProcedure is Procedure{
             Organ targetOrganInstance = Organ(exclusions[_exclusionNumber].targetOrgan);
             targetOrganInstance.remNorm(targetOrganInstance.getAddressPositionInNorm(exclusions[_exclusionNumber].memberToExcludeAddress));
             excludedAMember( exclusions[_exclusionNumber].memberToExcludeAddress, exclusions[_exclusionNumber].targetOrgan);
+            exclusions[_exclusionNumber].wasEnacted = true;
         }
     }
 
