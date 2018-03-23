@@ -122,11 +122,11 @@ class App extends Component {
             </div>
             <div className="input-group">
               <label><strong>File</strong></label>
-              <div className="custom-file">
-                <input className="float-right" type="file" id="inputGroupFile01" onChange={this.handleChange} />
-              </div>
+              <input className="float-right" type="file" onChange={this.handleChange} />
             </div>
-            <button className="btn btn-primary" type="submit">Submit</button>
+            <div className="input-group">
+              <button className="btn btn-primary" type="submit">Submit</button>
+            </div>
           </form>
         </div>
       </div>
@@ -136,24 +136,25 @@ class App extends Component {
   displayResults() {
     return (
       <div className="container">
-        <div className="jumbotron">
-          <h2>Results</h2>
+        <div>
+          <h2>Postulation informations</h2>
         </div>
         <div className="container">
           <div>
-            Info1: {this.state.info1}
+            <ul>
+              <li>Info1: {this.state.info1}</li>
+              <li>Info2: {this.state.info1}</li>
+            </ul>
           </div>
           <div>
-            Info2: {this.state.info2}
-          </div>
-          <div>
+            Loaded file:
             <a href={'https://ipfs.io/ipfs/' + this.state.addedFileHash}>
               {'https://ipfs.io/ipfs/' + this.state.addedFileHash}
             </a>
           </div>
           <div id="editor">
             <button className="btn btn-primary" onClick={this.handlePublish}>Publish to IPFS</button>
-            <button className="btn btn-primary" onClick={this.handleGoBack}>Change the informations</button>
+            <button className="btn btn-warning" onClick={this.handleGoBack}>Change the informations</button>
           </div>
         </div>
       </div>
@@ -162,21 +163,23 @@ class App extends Component {
 
   displayFinal() {
     return (
-      <div>
-        <div className="container">
-          <h2>Thank you for completing the formulary!</h2>
-          <div>
+      <div className="container">
+        <h2>Thank you for completing the formulary!</h2>
+        <div>
+          <span>
             Here is the hash of your formulary that you need to present in order
             to finish your postulation:
-            <div className="text-center">
-              {this.state.finalHash}
-            </div>
-            <div>
-              Link to your postulation recap on IPFS:
-              <a href={'https://ipfs.io/ipfs/' + this.state.finalHash}>
-                {'https://ipfs.io/ipfs/' + this.state.finalHash}
-              </a>
-            </div>
+          </span>
+          <div className="text-center">
+            {this.state.finalHash}
+          </div>
+          <div>
+            <span>
+              Link to your postulation recap on ipfs:
+            </span>
+            <a href={'https://ipfs.io/ipfs/' + this.state.finalHash}>
+              {'https://ipfs.io/ipfs/' + this.state.finalHash}
+            </a>
           </div>
         </div>
       </div>
