@@ -16,9 +16,22 @@ div {
 .App label {
   margin: auto 30px;
   height: 100%;
+  width: 20%;
 }
 
 .App .input-group {
-  margin: 10px auto;
+  margin: 20px auto;
   max-height: 50px;
+}
+
+.App #editor button {
+  max-height: 100px;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.App #formularySubmit {
+  max-height: 100px;
+  width: 40%;
+  margin: 0 auto;
 }

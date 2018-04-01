@@ -107,9 +107,7 @@ class App extends Component {
   displayFormulary() {
     return (
       <div className="container">
-        <div className="jumbotron text-center">
-          <h1>Formulary</h1>
-        </div>
+        <h1>Formulary</h1>
         <div className="container" id="formulary">
           <form className="" id="captureMedia" onSubmit={this.handleSubmit}>
             <div className="input-group">
@@ -122,11 +120,11 @@ class App extends Component {
             </div>
             <div className="input-group">
               <label><strong>File</strong></label>
-              <div className="custom-file">
-                <input className="float-right" type="file" id="inputGroupFile01" onChange={this.handleChange} />
-              </div>
+              <input className="float-right" type="file" onChange={this.handleChange} />
             </div>
-            <button className="btn btn-primary" type="submit">Submit</button>
+            <div>
+              <button id="formularySubmit" className="btn btn-primary" type="submit">Submit</button>
+            </div>
           </form>
         </div>
       </div>
@@ -134,26 +132,30 @@ class App extends Component {
   }
 
   displayResults() {
+    const displayInfo1 = this.state.info1 ? <li><strong>Info1:</strong> {this.state.info1}</li> : "";
+    const displayInfo2 = this.state.info2 ? <li><strong>Info2:</strong> {this.state.info2}</li> : "";
+    const displayInfoFile = this.state.addedFileHash ? (
+      <div>
+        <strong>Uploaded file: </strong>
+        <a href={'https://ipfs.io/ipfs/' + this.state.addedFileHash}>
+          {'https://ipfs.io/ipfs/' + this.state.addedFileHash}
+        </a>
+      </div>
+    ) : "";
     return (
       <div className="container">
-        <div className="jumbotron">
-          <h2>Results</h2>
-        </div>
+        <h1>Results</h1>
         <div className="container">
+          <ul>
+            {displayInfo1}
+            {displayInfo2}
+          </ul>
           <div>
-            Info1: {this.state.info1}
-          </div>
-          <div>
-            Info2: {this.state.info2}
-          </div>
-          <div>
-            <a href={'https://ipfs.io/ipfs/' + this.state.addedFileHash}>
-              {'https://ipfs.io/ipfs/' + this.state.addedFileHash}
-            </a>
+            {displayInfoFile}
           </div>
           <div id="editor">
             <button className="btn btn-primary" onClick={this.handlePublish}>Publish to IPFS</button>
-            <button className="btn btn-primary" onClick={this.handleGoBack}>Change the informations</button>
+            <button className="btn btn-info" onClick={this.handleGoBack}>Change the informations</button>
           </div>
         </div>
       </div>
@@ -164,15 +166,15 @@ class App extends Component {
     return (
       <div>
         <div className="container">
-          <h2>Thank you for completing the formulary!</h2>
-          <div>
+          <h1>Thank you for completing the formulary!</h1>
+          <div className="container">
             Here is the hash of your formulary that you need to present in order
             to finish your postulation:
             <div className="text-center">
               {this.state.finalHash}
             </div>
             <div>
-              Link to your postulation recap on IPFS:
+              Link to your postulation recap on ipfs:
               <a href={'https://ipfs.io/ipfs/' + this.state.finalHash}>
                 {'https://ipfs.io/ipfs/' + this.state.finalHash}
               </a>
