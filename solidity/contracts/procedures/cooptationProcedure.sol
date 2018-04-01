@@ -14,6 +14,9 @@ contract cooptationProcedure is Procedure{
     // 5: Moderators election
     // 6: Simple nomination
     // 7: Cooptation
+    // 8: Exclusion
+    // 9: VoteOnNorms
+    // 10: VoteOnAdmins
     int public procedureTypeNumber = 7;
 
     // Which organ will be affected

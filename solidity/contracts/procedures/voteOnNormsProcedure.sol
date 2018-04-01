@@ -16,6 +16,7 @@ contract voteOnNormsProcedure is Procedure{
     // 7: Cooptation
     // 8: Exclusion
     // 9: VoteOnNorms
+    // 10: VoteOnAdmins
     int public procedureTypeNumber = 9;
 
     // Which organ will be affected
