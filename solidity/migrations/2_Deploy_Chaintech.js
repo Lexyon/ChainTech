@@ -54,7 +54,7 @@ module.exports = function(deployer, network, accounts) {
       console.log("-------------------------------------")
       console.log("Set Admins")
       console.log("-------------------------------------")
-      membersOrgan.addAdmin(cooptation.address, true, false, false, false, "Cooptation procedure", {from: accounts[0]}).then(() => {
+      membersOrgan.addAdmin(cooptation.address, true, false, true, true, "Cooptation procedure", {from: accounts[0]}).then(() => {
       membersOrgan.addAdmin(memberExclusion.address, false, true, false, false , "Member exclusion",  {from: accounts[0]}).then(() => {
       bureauOrgan.addAdmin(bureauReplacement.address, true, true, false, false, "Bureau replacement", {from: accounts[0]}).then(() => {
         console.log("-------------------------------------")
