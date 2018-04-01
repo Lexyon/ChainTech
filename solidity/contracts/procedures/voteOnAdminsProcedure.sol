@@ -303,7 +303,7 @@ contract voteOnAdminsProcedure is Procedure{
         {
             // We initiate the Organ interface to add an Admin
 
-        Organ affectedOrgan = Organ(propositions[_propositionNumber].targetOrgan);
+            Organ affectedOrgan = Organ(propositions[_propositionNumber].targetOrgan);
 
             if(propositions[_propositionNumber].contractToAdd != 0x0000)
             {
@@ -372,6 +372,28 @@ contract voteOnAdminsProcedure is Procedure{
 
         // promulgation event
         promulgatePropositionEvent(msg.sender, _propositionNumber, _promulgate);
+
+    }
+
+    function archiveDefunctProposition(uint _propositionNumber) public {
+        // If a proposition contains an instruction that can not be executed (eg "add an admin" without having canAdd enabled), this proposition can be closed
+
+        Organ targetOrganContract = Organ(propositions[_propositionNumber].targetOrgan);
+        bool canAdd;
+        bool canDelete;
+        if (propositions[_propositionNumber].propositionType < 2){
+            (canAdd, canDelete) = targetOrganContract.isMaster(address(this));
+        }
+        else {
+            (canAdd, canDelete) = targetOrganContract.isAdmin(address(this));
+        }
+        
+        if ((!canAdd && (propositions[_propositionNumber].contractToAdd != 0x0000)) || (!canDelete && (propositions[_propositionNumber].contractToRemove != 0x0000)) )
+        {
+            propositions[_propositionNumber].wasEnded = true;
+            propositionsWaitingPromulgation[_propositionNumber] = false;
+        }
+        promulgatePropositionEvent(msg.sender, _propositionNumber, false);
 
     }
 
