@@ -18,6 +18,7 @@ contract deployCooptation is cooptationProcedure {
     finalPromulgatorsOrganContract = _finalPromulgatorsOrganContract; 
 
     quorumSize = _quorumSize;
+    minimumDepositSize = 0.001;
     // votingPeriodDuration = 3 minutes;
     // promulgationPeriodDuration = 3 minutes;
 
